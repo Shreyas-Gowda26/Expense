@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+
+  <!-- Login Section -->
+  <div id="login-section">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- App Section -->
+  <div id="app-section" style="display:none;">
+    <button id="logout-btn">Logout</button>
+
+    <h2>Add Expense</h2>
+    <form id="expense-form">
+      <input type="number" id="amount" placeholder="Amount" required>
+      <input type="text" id="category" placeholder="Category" required>
+      <input type="text" id="description" placeholder="Description">
+      <input type="date" id="date">
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <h2>Expenses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="expenses-list">
+        <!-- rows will be added dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
